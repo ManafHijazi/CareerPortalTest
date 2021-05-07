@@ -1,0 +1,78 @@
+@import "../../styles/core";
+.job {
+    padding: 0.8rem;
+    background: #fff;
+    box-shadow: 1px 2px 4px #ccc;
+    border-radius: 0.6rem;
+    .badge {
+        &:not(:empty) {
+            padding: 2px 0.6rem;
+            border-radius: 1.2rem;
+            margin: 0 0.6rem;
+            display: inline-block;
+            background: #eee;
+            font-size: 1rem;
+            color: $header-color;
+        }
+    }
+    h6 {
+        p {
+            font-size: 1rem;
+            color: $header-color;
+            margin: 3px 0;
+        }
+    }
+    button {
+        margin: 1.5rem 0;
+    }
+    .summary {
+        padding: 0.4rem;
+        border: 1px solid #ccc;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 6rem;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 80%;
+            background: #ccc;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        li {
+            margin: 0.25rem 0;
+            p {
+                display: flex;
+                justify-content: space-between;
+                span {
+                    &:first-child {
+                        font-weight: 600;
+                    }
+                    &:last-child {
+                        color: #333;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 992px) {
+            & {
+                grid-template-columns: 1fr;
+            }
+            li {
+                p {
+                    span {
+                        width: 100%;
+                        display: inline-block;
+                        &:last-child {
+                            padding: 0 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

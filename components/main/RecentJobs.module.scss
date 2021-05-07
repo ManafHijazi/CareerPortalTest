@@ -1,0 +1,28 @@
+@import "../../styles/core";
+.innerRow {
+    @extend %inner-row;
+}
+.slider {
+    width: 100%;
+    height: 300px;
+
+    div {
+        > span {
+            background: $primary-color !important;
+        }
+    }
+    .slide {
+        padding: 0.6rem;
+    }
+}
+.action {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+.title {
+    width: 100%;
+    margin: 1.2rem auto !important;
+    display: flex;
+}

@@ -1,0 +1,35 @@
+@import "../../styles/core";
+.innerRow {
+    @extend %inner-row;
+    padding: 0.8rem 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1.4rem auto;
+    .list {
+        flex: 0 0 calc(30% - 1.5rem);
+        max-height: 70vh;
+        overflow: auto;
+        padding: 0.25rem 1rem;
+        position: sticky;
+        top: 85px;
+        z-index: 2;
+    }
+    .job {
+        flex: 0 0 70%;
+    }
+    @media screen and (max-width: 992px) {
+        & {
+            .list,
+            .job {
+                flex: 0 0 100%;
+            }
+            .list {
+                position: relative !important;
+                order: 2;
+                top: unset;
+                margin: 2.2rem 0;
+            }
+        }
+    }
+}

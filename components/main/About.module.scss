@@ -1,0 +1,31 @@
+@import "../../styles/core";
+.about {
+  background: #f0f2f5;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  .innerRow {
+    @extend %inner-row;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .player {
+      flex: 0 0 60%;
+      min-height: 400px;
+    }
+    .text {
+      flex: 0 0 33.33%;
+    }
+    .title {
+      margin: 1.2rem 0;
+    }
+    @media screen and (max-width: 992px) {
+      .player,
+      .text {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

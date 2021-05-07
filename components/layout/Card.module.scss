@@ -1,0 +1,30 @@
+@import "../../styles/core";
+.card {
+    padding: 1.25rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    height: 90%;
+    border: 1px solid transparent;
+    transition: border 0.25s ease-in-out;
+    box-shadow: 0 0 6px #ccc;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    h6 {
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    p {
+        &:not(:empty) {
+            padding: 6px 2px;
+            border-top: 1px solid #ccc;
+        }
+    }
+    &:hover {
+        border-color: $primary-color;
+    }
+    .action {
+        margin-top: auto;
+        align-self: flex-end;
+    }
+}

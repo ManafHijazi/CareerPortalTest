@@ -1,0 +1,51 @@
+@import "../../styles/core";
+.interest {
+  width: 100%;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  .innerRow {
+    @extend %inner-row;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .title {
+      margin: 1.2rem 0;
+    }
+    @media screen and (max-width: 992px) {
+    }
+  }
+}
+.slider {
+  width: 100%;
+  height: 300px;
+  @media screen and (max-width: 850px) {
+    & {
+      width: 500px;
+    }
+  }
+  @media screen and (max-width: 568px) {
+    & {
+      width: 300px;
+    }
+  }
+  div {
+    > span {
+      background: $primary-color !important;
+    }
+  }
+  .slide {
+    padding: 0.6rem;
+  }
+  .img {
+    height: 80%;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

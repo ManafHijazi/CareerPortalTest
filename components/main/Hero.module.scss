@@ -1,0 +1,83 @@
+@import "../../styles/core";
+.hero {
+    min-height: calc(100vh - 70px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 900px;
+        transform: skewY(-5deg);
+        background: #fafafa;
+        top: 80%;
+        z-index: 1;
+    }
+    .innerRow {
+        @extend %inner-row;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-height: calc(100vh - 70px);
+        h1 {
+            margin-top: 20vh;
+            padding: 0 1.2rem;
+        }
+        h6 {
+            margin: 0 0.5rem;
+            &.subtitle {
+                padding: 0 1.2rem;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            & {
+                text-align: center;
+            }
+        }
+    }
+    .slider {
+        width: 80%;
+        height: 300px;
+        margin-top: auto;
+        div {
+            > span {
+                background: $primary-color !important;
+            }
+        }
+        .slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+            .card {
+                background: #fff;
+                border-radius: 12px;
+                padding: 0.8rem;
+                box-shadow: 2px 2px 10px 1px #ccc;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 60%;
+                height: 50%;
+                i {
+                    border-radius: 5rem;
+                    background: $primary-color;
+                    min-width: 30px;
+                    width: 40px;
+                    height: 40px;
+                    min-height: 30px;
+                    color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 0.4rem;
+                }
+            }
+        }
+    }
+}
